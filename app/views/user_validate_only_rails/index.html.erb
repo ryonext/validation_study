@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing User Validate Only Rails</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Password</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @user_validate_only_rails.each do |user_validate_only_rail| %>
+      <tr>
+        <td><%= user_validate_only_rail.name %></td>
+        <td><%= user_validate_only_rail.password %></td>
+        <td><%= link_to 'Show', user_validate_only_rail %></td>
+        <td><%= link_to 'Edit', edit_user_validate_only_rail_path(user_validate_only_rail) %></td>
+        <td><%= link_to 'Destroy', user_validate_only_rail, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New User validate only rail', new_user_validate_only_rail_path %>

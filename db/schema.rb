@@ -11,7 +11,14 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151201131618) do
+ActiveRecord::Schema.define(version: 20151203132301) do
+
+  create_table "user_validate_only_dbs", force: :cascade do |t|
+    t.string   "name",       limit: 20
+    t.string   "password"
+    t.datetime "created_at",            null: false
+    t.datetime "updated_at",            null: false
+  end
 
   create_table "user_validate_only_rails", force: :cascade do |t|
     t.string   "name"

@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @user_validate_only_db.name %>
+</p>
+
+<p>
+  <strong>Password:</strong>
+  <%= @user_validate_only_db.password %>
+</p>
+
+<%= link_to 'Edit', edit_user_validate_only_db_path(@user_validate_only_db) %> |
+<%= link_to 'Back', user_validate_only_dbs_path %>

@@ -14,7 +14,7 @@ gem "turbolinks"
 gem "uglifier", ">= 1.3.0"
 
 group :development, :test do
-  gem "byebug"
+  gem "pry-byebug"
 end
 
 group :development do

@@ -1,0 +1,23 @@
+h1 Listing user_validate_only_rails
+
+table
+  thead
+    tr
+      th Name
+      th Password
+      th
+      th
+      th
+
+  tbody
+    - @user_validate_only_rails.each do |user_validate_only_rail|
+      tr
+        td = user_validate_only_rail.name
+        td = user_validate_only_rail.password
+        td = link_to 'Show', user_validate_only_rail
+        td = link_to 'Edit', edit_user_validate_only_rail_path(user_validate_only_rail)
+        td = link_to 'Destroy', user_validate_only_rail, data: {:confirm => 'Are you sure?'}, :method => :delete
+
+br
+
+= link_to 'New User validate only rail', new_user_validate_only_rail_path

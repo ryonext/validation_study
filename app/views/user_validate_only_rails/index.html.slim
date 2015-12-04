@@ -17,7 +17,7 @@ table
         td = link_to 'Show', user_validate_only_rail
         td = link_to 'Edit', edit_user_validate_only_rail_path(user_validate_only_rail)
         td = link_to 'Destroy', user_validate_only_rail, data: {:confirm => 'Are you sure?'}, :method => :delete
-
+        td = link_to 'ChangePassword', password_edit_user_validate_only_rail_path(user_validate_only_rail)
 br
 
 = link_to 'New User validate only rail', new_user_validate_only_rail_path

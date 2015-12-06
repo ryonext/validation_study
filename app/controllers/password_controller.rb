@@ -1,12 +1,9 @@
 class PasswordController < ApplicationController
   before_action :set_user_validate_only_rail, only: [:edit, :update]
 
-  # GET /user_validate_only_rails/1/edit
   def edit
   end
 
-  # PATCH/PUT /user_validate_only_rails/1
-  # PATCH/PUT /user_validate_only_rails/1.json
   def update
     respond_to do |format|
       if @user_validate_only_rail.update(user_validate_only_rail_params)

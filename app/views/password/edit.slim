@@ -1,6 +1,6 @@
 h1 Editing password
 
-= form_for @user_validate_only_rail do |f|
+= form_for @user_validate_only_rail, url: password_user_validate_only_rail_path(@user_validate_only_rail) do |f|
   - if @user_validate_only_rail.errors.any?
     #error_explanation
       h2 = "#{pluralize(@user_validate_only_rail.errors.count, "error")} prohibited this user_validate_only_rail from being saved:"

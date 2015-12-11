@@ -7,6 +7,7 @@
           li = message
 
   .field
-    = f.label :username
-    = f.text_field :username
-  .actions = f.submit
+    = f.text_field :username, class: "form-control", placeholder: "Username"
+  br
+  .actions = f.submit "作成", class: "btn btn-lg btn-primary btn-block"
+

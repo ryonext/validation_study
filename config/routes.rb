@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :accounts
   resources :user_validate_only_dbs
   resources :user_validate_only_rails do
     member do

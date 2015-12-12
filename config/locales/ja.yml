@@ -1,0 +1,9 @@
+ja:
+  activerecord:
+    errors:
+      models:
+        accounts:
+          attributes:
+            username:
+              uniqueness: "そのユーザ名はすでに使われています。"
+

@@ -4,10 +4,11 @@
       = f.text_field :username, class: "form-control", placeholder: "Username"
       - @account.errors.full_messages.each do |message|
         label.control-label
-          | このユーザ名はすでに使われています。
+          = error_message(@error_count)
   - else
     = f.text_field :username, class: "form-control", placeholder: "Username"
 
   br
+  = hidden_field_tag :error_count, @error_count
   .actions = f.submit "作成", class: "btn btn-lg btn-primary btn-block"
 

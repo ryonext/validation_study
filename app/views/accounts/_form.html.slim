@@ -4,7 +4,7 @@
       = f.text_field :username, class: "form-control", placeholder: "Username"
       - @account.errors.full_messages.each do |message|
         label.control-label
-          = error_message(@error_count)
+          == error_message(@error_count)
   - else
     = f.text_field :username, class: "form-control", placeholder: "Username"
 

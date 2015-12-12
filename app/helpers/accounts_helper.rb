@@ -5,7 +5,7 @@ module AccountsHelper
     elsif count == 1
       "このユーザ名も使われています。m9(^Д^)ﾌﾟｷﾞｬｰ"
     else
-      "このユーザ名も使われています。ﾌﾟｯﾌﾟｷﾞｬｰｯ!!m9ﾟ｡(^Д^ﾟ≡｡ﾟ^Д^)m9ﾟ｡ﾌﾟｯﾌﾟｷﾞｬ-ｯ!!"
+      "このユーザ名も使われていますwww<br>#{image_tag 'donna_kimochi.png'}"
     end
   end
 end

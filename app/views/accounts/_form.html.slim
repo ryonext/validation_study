@@ -1,13 +1,13 @@
 = form_for @account do |f|
   - if @account.errors.any?
-    #error_explanation
-      h2 = "#{pluralize(@account.errors.count, "error")} prohibited this account from being saved:"
-      ul
-        - @account.errors.full_messages.each do |message|
-          li = message
-
-  .field
+    .from-group.has-error
+      = f.text_field :username, class: "form-control", placeholder: "Username"
+      - @account.errors.full_messages.each do |message|
+        label.control-label
+          = message
+  - else
     = f.text_field :username, class: "form-control", placeholder: "Username"
+
   br
   .actions = f.submit "作成", class: "btn btn-lg btn-primary btn-block"
 

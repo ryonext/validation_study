@@ -1,14 +1,24 @@
 = form_for @account do |f|
   - if @account.errors.any?
-    .from-group.has-error
+    .form-group.has-error
       = f.text_field :username, class: "form-control", placeholder: "Username"
       - @account.errors.full_messages.each do |message|
         label.control-label
           == error_message(@error_count)
   - else
-    = f.text_field :username, class: "form-control", placeholder: "Username"
+    = f.text_field :username, class: "form-control", placeholder: "Username", required: true
+
 
   br
   = hidden_field_tag :error_count, @error_count
-  .actions = f.submit "作成", class: "btn btn-lg btn-primary btn-block"
+  - if params[:will_success]
+    .glyphicon.glyphicon-ok.text-success
+      | このユーザ名は使用可能です
+    .actions = f.submit "作成", class: "btn btn-lg btn-primary btn-block"
+  - elsif params[:will_error]
+    .glyphicon.glyphicon-remove.text-danger
+      | このユーザ名は使われています
+    .actions = f.submit "作成", class: "btn btn-lg btn-primary btn-block", disabled: true
+  - else
+    .actions = f.submit "作成", class: "btn btn-lg btn-primary btn-block"
 

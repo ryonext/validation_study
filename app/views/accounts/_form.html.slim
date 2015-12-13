@@ -10,13 +10,5 @@
 
   br
   = hidden_field_tag :error_count, @error_count
-  - if params[:will_success]
-    .glyphicon.glyphicon-ok.text-success
-      | このユーザ名は使用可能です
-    .actions = f.submit "作成", class: "btn btn-lg btn-primary btn-block"
-  - elsif params[:will_error]
-    .glyphicon.glyphicon-remove.text-danger
-      | このユーザ名は使われています
-    .actions = f.submit "作成", class: "btn btn-lg btn-primary btn-block", disabled: true
-  - else
-    .actions = f.submit "作成", class: "btn btn-lg btn-primary btn-block"
+  #account-result
+  .actions = f.submit "作成", class: "btn btn-lg btn-primary btn-block", id: "submit-button"

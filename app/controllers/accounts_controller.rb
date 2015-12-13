@@ -63,7 +63,7 @@ class AccountsController < ApplicationController
   end
 
   def exist
-    if Account.exists?(username: params[:user_name])
+    if Account.exists?(username: params[:username])
       render json: { result: true }.to_json
     else
       render json: { result: false }.to_json

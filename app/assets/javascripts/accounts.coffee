@@ -4,7 +4,7 @@
 $ ->
   $("#username").keyup(->
     $.get(
-      "http://localhost:3000/accounts/exists",
+      "/accounts/exists",
       { username: $('#username').val() },
       (data) ->
         if data.result

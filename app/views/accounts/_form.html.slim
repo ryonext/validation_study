@@ -1,12 +1,12 @@
 = form_for @account do |f|
   - if @account.errors.any?
     .form-group.has-error
-      = f.text_field :username, class: "form-control", placeholder: "Username"
+      = f.text_field :username, class: "form-control", placeholder: "Username", id: :username
       - @account.errors.full_messages.each do |message|
         label.control-label
           == error_message(@error_count)
   - else
-    = f.text_field :username, class: "form-control", placeholder: "Username", required: true
+    = f.text_field :username, class: "form-control", placeholder: "Username", required: true, id: :username
 
   br
   = hidden_field_tag :error_count, @error_count
@@ -20,4 +20,3 @@
     .actions = f.submit "作成", class: "btn btn-lg btn-primary btn-block", disabled: true
   - else
     .actions = f.submit "作成", class: "btn btn-lg btn-primary btn-block"
-

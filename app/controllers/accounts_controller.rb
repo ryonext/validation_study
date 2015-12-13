@@ -62,6 +62,14 @@ class AccountsController < ApplicationController
     end
   end
 
+  def exist
+    if Account.exists?(username: params[:user_name])
+      render json: { result: true }.to_json
+    else
+      render json: { result: false }.to_json
+    end
+  end
+
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_account
